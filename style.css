@@ -7,7 +7,7 @@
 :root {
   --black: #333;
   --white: #fff;
-  --background: e5e5e5;
+  --background: #e5e5e5;
 }
 
 /* body {
@@ -100,6 +100,7 @@ p {
   width: 93%;
   /* height: 400px; */
   margin: 6% auto;
+  margin-bottom: auto;
   /* box-shadow: 0 4px 14px rgb(71, 69, 69); */
   transition: 0.25s;
 }
@@ -161,6 +162,7 @@ p {
   display: inline-block;
   padding: 4px 10px;
   margin-top: 25px;
+  /* margin-right: auto; */
   border: 1px solid var(--black);
   color: var(--black);
   background: var(--white);
@@ -187,7 +189,7 @@ img {
   width: 100%;
   height: 287px;
 }
-.ba {
+.article.postBox.sembunyi.ba {
   display: none;
 }
 
@@ -210,6 +212,7 @@ img {
   }
   .post .contentBx {
     grid-template-columns: repeat(1, 1fr);
+    margin: 0px 10px;
   }
   section {
     padding: 30px;
@@ -238,6 +241,9 @@ img {
 @media (max-width: 768px) {
   .content {
     margin: 0 25px;
+  }
+  .post .contentBx {
+    margin: 0px 10px;
   }
 }
 
@@ -389,7 +395,7 @@ header.shadow .logo {
   }
 
   .about .contentBx,
-  .about .imgBx {
+  . .imgBx {
     min-width: 100%;
     width: 100%;
     padding-right: 0px;
@@ -530,4 +536,79 @@ h2.judul {
   font-size: 1.1em;
   margin-block-start: 0.83em;
   margin-block-end: 0.4em;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+.tabs {
+  background: white;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5rem;
+  padding: 10px;
+  display: flex;
+  position: relative;
+}
+input[type="radio"] {
+  display: none;
+}
+label {
+  display: block;
+  height: 18px;
+  width: 200px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.glider {
+  position: absolute;
+  top: 7px;
+  left: 10%;
+  background: black;
+  width: 16%;
+  height: 25px;
+  border-radius: 2rem;
+  transition: ease 0.3s;
+}
+#tab1:checked ~ label[for="tab1"] {
+  color: white;
+}
+#tab2:checked ~ label[for="tab2"] {
+  color: white;
+}
+#tab3:checked ~ label[for="tab3"] {
+  color: white;
+}
+#tab1:checked ~ .glider {
+  transform: translateX(0);
+}
+#tab2:checked ~ .glider {
+  transform: translateX(200px);
+}
+#tab3:checked ~ .glider {
+  transform: translateX(400px);
+}
+.filter {
+  cursor: pointer;
+}
+input.all.btn.mgt60.btnMuncul {
+  opacity: 1;
+}
+/* tambahan */
+.title.fx {
+  display: flex;
+}
+.article.postBox.sembunyi {
+  display: none;
 }
