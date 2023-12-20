@@ -238,15 +238,6 @@ img {
   } */
 }
 
-@media (max-width: 768px) {
-  .content {
-    margin: 0 25px;
-  }
-  .post .contentBx {
-    margin: 0px 10px;
-  }
-}
-
 /* css2 */
 
 :root {
@@ -395,7 +386,7 @@ header.shadow .logo {
   }
 
   .about .contentBx,
-  . .imgBx {
+  .imgBx {
     min-width: 100%;
     width: 100%;
     padding-right: 0px;
@@ -438,54 +429,8 @@ header.shadow .logo {
   .header-img {
     height: 340px;
   }
-}
-
-@media (max-width: 396px) {
-  .home-title {
-    font-size: 2rem;
-  }
-
-  .home-subtitle {
-    font-size: 0.9rem;
-  }
-
-  .home {
-    min-height: 300px;
-  }
-
-  .post-box {
-    padding: 10px;
-  }
-
-  .header-title {
-    font-size: 1.4rem;
-  }
-
-  .header-img {
-    height: 240px;
-  }
-
-  .post-header {
-    height: 335px;
-  }
-
-  .header-img {
-    height: 340px;
-  }
-}
-
-@media (max-width: 375px) {
-  header {
-    width: 100%;
-    font-size: smaller;
-  }
-  .aboutus p {
-    text-align: justify;
-    font-size: small;
-    width: 200px;
-  }
-  .info a {
-    font-size: 10px;
+  .tabs label {
+    width: 97px;
   }
 }
 
@@ -611,4 +556,95 @@ input.all.btn.mgt60.btnMuncul {
 }
 .article.postBox.sembunyi {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin: 0 25px;
+  }
+  .post .contentBx {
+    margin: 0px 10px;
+  }
+  .tabs label {
+    height: 18px;
+    width: 130px;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  #tab1:checked ~ .glider {
+    transform: translateX(0);
+  }
+  #tab2:checked ~ .glider {
+    transform: translateX(133px);
+  }
+  #tab3:checked ~ .glider {
+    transform: translateX(265px);
+  }
+}
+
+@media (max-width: 396px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .home {
+    min-height: 300px;
+  }
+
+  .post-box {
+    padding: 10px;
+  }
+
+  .header-title {
+    font-size: 1.4rem;
+  }
+
+  .header-img {
+    height: 240px;
+  }
+
+  .post-header {
+    height: 335px;
+  }
+
+  .header-img {
+    height: 340px;
+  }
+  .tabs label {
+    height: 18px;
+    width: 98px;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  #tab1:checked ~ .glider {
+    transform: translateX(0);
+  }
+  #tab2:checked ~ .glider {
+    transform: translateX(95px);
+  }
+  #tab3:checked ~ .glider {
+    transform: translateX(195px);
+  }
+  .glider {
+    width: 20%;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    width: 100%;
+    font-size: smaller;
+  }
+  .aboutus p {
+    text-align: justify;
+    font-size: small;
+    width: 200px;
+  }
+  .info a {
+    font-size: 10px;
+  }
 }
